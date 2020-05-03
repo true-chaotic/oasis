@@ -51,6 +51,8 @@ const i18nBase = require("./i18n");
 let selectedLanguage = "en";
 let i18n = i18nBase[selectedLanguage];
 
+const themeSelector = require('./helpers/themeSelector');
+
 exports.setLanguage = (language) => {
   selectedLanguage = language;
   i18n = Object.assign({}, i18nBase.en, i18nBase[language]);
@@ -848,6 +850,7 @@ exports.settingsView = ({ status, peers, theme, themeNames, version }) => {
         button({ type: "submit" }, i18n.setTheme)
       ),
       base16Elements,
+      themeSelector({post, i18n, currentTheme: theme}),
       h2(i18n.language),
       p(i18n.languageDescription),
       form(

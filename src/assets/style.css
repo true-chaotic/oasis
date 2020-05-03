@@ -596,3 +596,54 @@ hr {
 .theme-preview-0F {
   background-color: var(--base0F);
 }
+
+
+.theme-examples {
+  --preview-height: 20em;
+
+  margin-top: 1em;
+  padding-top: var(--preview-height);
+  position: relative;
+}
+
+.theme-examples input {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  margin-left: 1em;
+  margin-top: 1.7em;
+}
+
+.theme-examples label {
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+.theme-examples input:checked + label {
+  border: 2px solid var(--base07);
+}
+
+.theme-examples-post {
+  --bg: var(--base00);
+  --bg-status: var(--base01);
+  --bg-selection: var(--base02);
+  --fg-alt: var(--base03);
+  --fg-status: var(--base04);
+  --fg: var(--base05);
+  --fg-light: var(--base06);
+  --bg-light: var(--base07);
+
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2em;
+  background-color: var(--bg-status);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--preview-height);
+  overflow: auto;
+}
